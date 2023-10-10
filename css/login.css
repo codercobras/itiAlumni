@@ -135,6 +135,7 @@ nav {
     backdrop-filter: blur(10px);
     color: var(--clr-white);
     transition: all 0.4s ease;
+    border-bottom: 1px solid #333;
 }
 
 nav>a {
@@ -189,16 +190,17 @@ button {
 }
 
 .refor{
-    margin-top: 20px;
-    margin-bottom: 10px;
     display: flex;
-    justify-content: space-between;
+    width: 75%; 
+    font-size: 11px;
+}
+
+.remember{
+    width: 100%;
 }
 .signupaa{
     display: flex;
-    
-    gap: 190px;
-
+    gap: 4vw;
     margin-top: 10px;
     
     
@@ -258,7 +260,7 @@ button.ghost:hover {
         0 10px 10px rgba(0, 0, 0, 0.22);
     width: 768px;
     max-width: 100%;
-    display: flex;
+    display: flex;  
 }
 
 form {
@@ -273,10 +275,9 @@ form {
     text-align: center;
 }
 .Forgot {
-    margin-top: 6px;
-    margin-left: 130px;
-
+    width: 100%;
 }
+
 form a {
     font-size: 14px !important;
     color: #777;
@@ -414,8 +415,7 @@ input {
 }
 
 .social-container {
-    margin: 20px 0;
-    margin-bottom: 30px;
+    height: 13vh;
 }
 
 .social-container a {
@@ -451,7 +451,7 @@ input {
 
     .container {
         display: none;
-        height: 200vh;
+        height: 100vh;
     }
 
     .mobile-container {
@@ -468,6 +468,15 @@ input {
         margin: 10vw 0;
         font-weight: 400;
         font-size: 4vw;
+    }
+
+    .refor{
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center ;
+        margin:0;
     }
 
 
