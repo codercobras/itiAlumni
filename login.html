@@ -23,15 +23,17 @@
                 <h1>Create Account</h1>
                 <div class="social-container">
                     
-                    <a href="#" class="social"><i class="fa-solid fa-id-card fa-1x"></i></a>
+                    <a href="https://iti-alumni-three.vercel.app/" class="social" target=”_blank”><i class="fa-solid fa-id-card fa-1x"></i></a>
                     <span class="spanor">or</span>
                    
-                    <a href="#" class="social"><i class="fa-solid fa-user-graduate fa-1x"></i></a>
+                    <a href="https://iti-alumni-three.vercel.app/" class="social" target=”_blank”><i class="fa-solid fa-user-graduate fa-1x"></i></a>
                     
                 </div>
                 
-                <input type="text" placeholder="Name" />
+            
+                              
                 
+                <input type="text" placeholder="Name">
                 <input type="email" placeholder="Email" />
                 <input type="password" placeholder="Password" />
                 <input type="password" placeholder="Confirm Password" />
@@ -94,17 +96,42 @@
             <span>or use your account</span>
             <input type="email" placeholder="Email" />
             <input type="password" placeholder="Password" />
-            <a href="#">Forgot your password?</a>
+            <div class="refor">
+                <div class="remember">
+                    <input type="checkbox" value="lsremember" id="rememberme">&nbsp;<label for="rememberme">Remember me</label>
+                </div>         
+                <div class="Forgot">
+                    <a href="#"><span class="spangot">Forgot your password?</span></a>
+                </div>
+            </div>            
             <button>Sign In</button>
             <a href="#register">New User? Register now</a>
         </form>
         <form action="#" id="register">
             <h1>New User? <br>Create Account</h1>
-            <span>or use your email for registration</span>
-            <input type="text" placeholder="Name" />
+            <div class="social-container">
+                    
+                <a href="https://iti-alumni-three.vercel.app/" class="social" target=”_blank”><i class="fa-solid fa-id-card fa-1x"></i></a>
+                <span class="spanor">or</span>
+               
+                <a href="https://iti-alumni-three.vercel.app/" class="social" target=”_blank”><i class="fa-solid fa-user-graduate fa-1x"></i></a>
+                
+            </div>           
+             <input type="text" placeholder="Name" />
             <input type="email" placeholder="Email" />
             <input type="password" placeholder="Password" />
+            <div class="signupaa">
+                <div class="saa1">
+                    <input type="checkbox" class="checkoption" value="lsadmin" id="admin">&nbsp;<label for="admin">Sign up as Student</label>
+                </div>         
+                <div class="saa2">
+                    <input type="checkbox" class="checkoption" value="lsalumni" id="alumni">&nbsp;<label for="alumni">Sign up as Alumni</label>
+                    
+
+                </div>
+            </div>
             <button>Sign Up</button>
+
         </form>
 
     </div>
@@ -134,6 +161,23 @@
         });
 
     });
+
+    // Function to save document to local storage
+                    function saveDocument() {
+                        var documentInput = document.getElementById("documentInput").value;
+                        localStorage.setItem("userDocument", documentInput);
+                        displaySavedDocument();
+                    }
+            
+                    // Function to display the saved document
+                    function displaySavedDocument() {
+                        var savedDocumentDiv = document.getElementById("savedDocument");
+                        savedDocumentDiv.innerHTML = "<strong>Saved Document:</strong><br>" + localStorage.getItem("userDocument");
+                    }
+            
+                    // Display saved document on page load
+                    window.onload = displaySavedDocument;
+
     </script>
     
   
