@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log in | ITI Alumni</title>
+    <link rel="stylesheet" href="css/login.css">
+    
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a class="logo" href="#main">ITI Alumni</a>
+        </nav>
+    </header>
+
+
+    <div class="container" id="container">
+        <div class="form-container sign-up-container">
+            <form action="#">
+                <h1>Create Account</h1>
+                <div class="social-container">
+                    
+                    <a href="#" class="social"><i class="fa-solid fa-id-card fa-1x"></i></a>
+                    <span class="spanor">or</span>
+                   
+                    <a href="#" class="social"><i class="fa-solid fa-user-graduate fa-1x"></i></a>
+                    
+                </div>
+                
+                <input type="text" placeholder="Name" />
+                
+                <input type="email" placeholder="Email" />
+                <input type="password" placeholder="Password" />
+                <input type="password" placeholder="Confirm Password" />
+                <div class="signupaa">
+                    <div class="saa1">
+                        <input type="checkbox" class="checkoption" value="lsadmin" id="admin">&nbsp;<label for="admin">Sign up as Student</label>
+                    </div>         
+                    <div class="saa2">
+                        <input type="checkbox" class="checkoption" value="lsalumni" id="alumni">&nbsp;<label for="alumni">Sign up as Alumni</label>
+                        
+
+                    </div>
+                </div>
+                <button>Sign Up</button>
+                
+            </form>
+        </div><a href="#">Forgot your password?</a>
+        <div class="form-container sign-in-container">
+            <form action="#">
+                <h1>Sign in</h1>
+                
+                <input type="email" placeholder="Email" />
+                <input type="password" placeholder="Password" />
+                <div class="refor">
+                    <div class="remember">
+                        <input type="checkbox" value="lsremember" id="rememberme">&nbsp;<label for="rememberme">Remember me</label>
+                    </div>         
+                    <div class="Forgot">
+                        <a href="#"><span class="spangot">Forgot your password?</span></a>
+                        
+                        
+
+                    </div>
+                </div>
+                
+                <button>Sign In</button>
+            </form>
+        </div>
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel overlay-left">
+                    <h1>Hello, Friend!</h1>
+                    <p>Enter your personal details and start journey with us</p>
+                    
+                    <button class="ghost" id="signIn">Sign In</button>
+                </div>
+                <div class="overlay-panel overlay-right">
+                    <h1>Welcome Back!</h1>
+                    <p>To keep connected with us please login with your personal info</p>
+                    
+                    <button class="ghost" id="signUp">Sign Up</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="mobile-container">
+        <form action="#">
+            <h1>Sign in</h1>
+            <span>or use your account</span>
+            <input type="email" placeholder="Email" />
+            <input type="password" placeholder="Password" />
+            <a href="#">Forgot your password?</a>
+            <button>Sign In</button>
+            <a href="#register">New User? Register now</a>
+        </form>
+        <form action="#" id="register">
+            <h1>New User? <br>Create Account</h1>
+            <span>or use your email for registration</span>
+            <input type="text" placeholder="Name" />
+            <input type="email" placeholder="Email" />
+            <input type="password" placeholder="Password" />
+            <button>Sign Up</button>
+        </form>
+
+    </div>
+
+
+    <script>
+        const signUpButton = document.getElementById('signUp');
+        const signInButton = document.getElementById('signIn');
+        const container = document.getElementById('container');
+
+        signUpButton.addEventListener('click', () => {
+            container.classList.add("right-panel-active");
+        });
+
+        signInButton.addEventListener('click', () => {
+            container.classList.remove("right-panel-active");
+        });
+    </script>
+    <script src="https://kit.fontawesome.com/117abde0a4.js" crossorigin="anonymous"></script>
+    <!-- Script -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function(){
+
+        $('.checkoption').click(function() {
+            $('.checkoption').not(this).prop('checked', false);
+        });
+
+    });
+    </script>
+    
+  
+</body>
+
+
+</html>
